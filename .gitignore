@@ -27,3 +27,4 @@ validate-actual.py
 make-screenshot-index.py
 package-submission.py
 build-submission-documents.py
+submission-documents/
