@@ -18,3 +18,12 @@ split-evidence.py
 validate-evidence.py
 ~$*
 
+
+# Local submission and capture utilities
+capture-native.ps1
+run-console-evidence.ps1
+prepare-actual-evidence.py
+validate-actual.py
+make-screenshot-index.py
+package-submission.py
+build-submission-documents.py

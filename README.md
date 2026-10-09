@@ -42,11 +42,11 @@ The pipeline overwrites the sample tables. It writes Ravi's project properties a
 
 The course stack uses Hadoop 3.3.3, Hive 3.1.3, Spark 3.3.2, Java 8 and a MySQL-backed metastore. Spark uses local processing threads while retaining real HDFS storage and the shared Hive metastore. HiveServer2 uses a 2 GB heap and a 16 MB sorting buffer and is configured for local MapReduce, notification polling disabled, and the existing service identity. Java subprocesses use FORK to avoid the observed ARM emulation subprocess hang. The optional Spark UI is disabled to avoid its emulated shutdown issue.
 
-## Actual screenshots
+## Screenshots and reports
 
-The current screenshots are direct captures of real console windows running Docker, Hive, and HDFS commands. They are not regenerated images of saved text. The console displays the executed SQL, real output and Ravi's persisted project properties. The native window capture script is capture-native.ps1; run-console-evidence.ps1 executes each check. Execution transcripts are retained as logs/actual-evidence-*.log. Startup diagnostics remain in the container's project logs.
+The numbered PNG files in screenshots/ show Hive queries, HDFS directories, table schemas and project properties from the running course environment. Open screenshots/index.html to browse them. Corresponding command outputs are saved in logs/actual-evidence-*.log.
 
-screenshots/index.html provides a gallery of the actual PNG files. The former transcript-view images are kept only in archive/transcript-views and are excluded from the submission ZIP.
+The submission-documents/ folder contains the questions and answers and the separate project report. Optional utilities for preparing documents, capturing screenshots and packaging the submission are kept locally and are not required to run the analytics pipeline.
 
 ## Sample verification
 
