@@ -46,7 +46,7 @@ The course stack uses Hadoop 3.3.3, Hive 3.1.3, Spark 3.3.2, Java 8 and a MySQL-
 
 The numbered PNG files in screenshots/ show Hive queries, HDFS directories, table schemas and project properties from the running course environment. Open screenshots/index.html to browse them. Corresponding command outputs are saved in logs/actual-evidence-*.log.
 
-Word submission documents are being revised separately and are not included in the repository. Optional utilities for preparing documents, capturing screenshots and packaging the submission are kept locally and are not required to run the analytics pipeline.
+The APA project report is included at submission-documents/Ravi_iPhone_Sales_Report_APA.docx, with actual screenshots and results tables. Optional utilities for preparing documents, capturing screenshots and packaging the submission are kept locally and are not required to run the analytics pipeline.
 
 ## Sample verification
 
@@ -72,4 +72,5 @@ credentials.txt contains private local connection details and is excluded from t
 | 10.png | Fact data sample |
 | 11.png | Daily monthly and customer reports |
 | 12.png | Ravi project properties stored in Hive |
+
 
