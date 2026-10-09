@@ -1,0 +1,51 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261008192826
+Username: RAVI\rsah9
+RunAs User: RAVI\rsah9
+Configuration Name: 
+Machine: RAVI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoLogo -NoExit -ExecutionPolicy Bypass -File E:\iPhone-Sales-Project\run-console-evidence.ps1 -Number 04 -SqlFile sql\actual\evidence-04.sql
+Process ID: 8040
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Ravi iPhone Sales Analytics Project
+Actual Docker project account:
+takeo
+Actual container: takeo-de-env
+
+Executing these commands:
+hadoop fs -cat /iphone/project-info.txt; hadoop fs -ls /warehouse/tablespace/managed/hive/
+2026-10-09 04:58:38,087 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Project name: Ravi iPhone Sales Analytics
+Student: Ravi
+Hive database: iphone_analytics
+Course container: takeo-de-env
+Existing infrastructure account: takeo
+Project directory: /home/takeo/ravi-iphone-project
+2026-10-09 04:59:03,639 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 13 items
+drwxr-xr-x   - takeo supergroup          0 2026-10-08 16:25 /warehouse/tablespace/managed/hive/bronze_customers
+drwxr-xr-x   - takeo supergroup          0 2026-10-08 16:26 /warehouse/tablespace/managed/hive/bronze_products
+drwxr-xr-x   - takeo supergroup          0 2026-10-08 16:27 /warehouse/tablespace/managed/hive/bronze_sales
+drwxr-xr-x   - takeo supergroup          0 2026-10-08 16:27 /warehouse/tablespace/managed/hive/bronze_stores
+drwxr-xr-x   - takeo supergroup          0 2026-10-08 16:31 /warehouse/tablespace/managed/hive/dim_customer
+drwxr-xr-x   - takeo supergroup          0 2026-10-08 16:32 /warehouse/tablespace/managed/hive/dim_date
+drwxr-xr-x   - takeo supergroup          0 2026-10-08 16:31 /warehouse/tablespace/managed/hive/dim_product
+drwxr-xr-x   - takeo supergroup          0 2026-10-08 16:32 /warehouse/tablespace/managed/hive/dim_store
+drwxr-xr-x   - takeo supergroup          0 2026-10-08 16:32 /warehouse/tablespace/managed/hive/fact_sales
+drwxr-xr-x   - takeo supergroup          0 2026-10-08 16:29 /warehouse/tablespace/managed/hive/silver_customers
+drwxr-xr-x   - takeo supergroup          0 2026-10-08 16:30 /warehouse/tablespace/managed/hive/silver_products
+drwxr-xr-x   - takeo supergroup          0 2026-10-08 16:31 /warehouse/tablespace/managed/hive/silver_sales
+drwxr-xr-x   - takeo supergroup          0 2026-10-08 16:30 /warehouse/tablespace/managed/hive/silver_stores
+**********************
+Windows PowerShell transcript end
+End time: 20261008192916
+**********************

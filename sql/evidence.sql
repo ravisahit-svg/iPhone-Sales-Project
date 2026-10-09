@@ -1,0 +1,17 @@
+SHOW DATABASES;
+USE iphone_analytics;
+SHOW TABLES;
+DESCRIBE FORMATTED silver_sales;
+DESCRIBE FORMATTED fact_sales;
+SHOW PARTITIONS silver_sales;
+SHOW PARTITIONS fact_sales;
+SELECT p.product_name, SUM(f.total_amount) AS revenue FROM fact_sales f JOIN dim_product p ON f.product_id=p.product_id GROUP BY p.product_name ORDER BY revenue DESC;
+SELECT s.store_name, SUM(f.total_amount) AS revenue FROM fact_sales f JOIN dim_store s ON f.store_id=s.store_id GROUP BY s.store_name ORDER BY revenue DESC;
+SELECT COUNT(*) AS bronze_sales_count FROM bronze_sales;
+SELECT COUNT(*) AS silver_sales_count FROM silver_sales;
+SELECT COUNT(*) AS fact_sales_count FROM fact_sales;
+SELECT * FROM silver_sales LIMIT 10;
+SELECT * FROM fact_sales LIMIT 10;
+SELECT date_key, SUM(quantity) AS units, SUM(total_amount) AS revenue FROM fact_sales GROUP BY date_key ORDER BY date_key;
+SELECT d.year, d.month, SUM(f.total_amount) AS revenue FROM fact_sales f JOIN dim_date d ON f.date_key=d.date_key GROUP BY d.year,d.month;
+SELECT c.customer_name, COUNT(*) AS purchases, SUM(f.quantity) AS units, SUM(f.total_amount) AS revenue FROM fact_sales f JOIN dim_customer c ON f.customer_id=c.customer_id GROUP BY c.customer_name ORDER BY revenue DESC;

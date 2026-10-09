@@ -1,0 +1,6 @@
+Project name: Ravi iPhone Sales Analytics
+Student: Ravi
+Hive database: iphone_analytics
+Course container: takeo-de-env
+Existing infrastructure account: takeo
+Project directory: /home/takeo/ravi-iphone-project

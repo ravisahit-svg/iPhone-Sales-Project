@@ -1,0 +1,54 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261008193605
+Username: RAVI\rsah9
+RunAs User: RAVI\rsah9
+Configuration Name: 
+Machine: RAVI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoLogo -NoExit -ExecutionPolicy Bypass -File E:\iPhone-Sales-Project\run-console-evidence.ps1 -Number 12 -SqlFile sql\actual\evidence-12.sql
+Process ID: 27704
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Ravi iPhone Sales Analytics Project
+Actual Docker project account:
+takeo
+Actual container: takeo-de-env
+
+Executing these commands:
+USE iphone_analytics;
+DESCRIBE DATABASE EXTENDED iphone_analytics;
+SHOW TBLPROPERTIES fact_sales;
++-------------------+----------+---------------------------------------------------------------+-------------+-------------+-------------------------------------------------------------------+
+|      db_name      | comment  |                           location                            | owner_name  | owner_type  |                            parameters                             |
++-------------------+----------+---------------------------------------------------------------+-------------+-------------+-------------------------------------------------------------------+
+| iphone_analytics  |          | hdfs://0.0.0.0:54310/data/hive/warehouse/iphone_analytics.db  | takeo       | USER        | {project.student=Ravi, project.name=Ravi iPhone Sales Analytics}  |
++-------------------+----------+---------------------------------------------------------------+-------------+-------------+-------------------------------------------------------------------+
++---------------------------------------+-------------------------------------------------------------------------------------------------+
+|               prpt_name               |                                           prpt_value                                            |
++---------------------------------------+-------------------------------------------------------------------------------------------------+
+| EXTERNAL                              | TRUE                                                                                            |
+| last_modified_by                      | takeo                                                                                           |
+| last_modified_time                    | 1791501752                                                                                      |
+| project.name                          | Ravi iPhone Sales Analytics                                                                     |
+| project.student                       | Ravi                                                                                            |
+| spark.sql.create.version              | 3.3.2                                                                                           |
+| spark.sql.partitionProvider           | catalog                                                                                         |
+| spark.sql.sources.provider            | parquet                                                                                         |
+| spark.sql.sources.schema              | {"type":"struct","fields":[{"name":"sale_id","type":"integer","nullable":true,"metadata":{}},{"name":"customer_id","type":"integer","nullable":true,"metadata":{}},{"name":"product_id","type":"intege
+r","nullable":true,"metadata":{}},{"name":"store_id","type":"integer","nullable":true,"metadata":{}},{"name":"quantity","type":"integer","nullable":true,"metadata":{}},{"name":"total_amount","type":"long","nullable":true,"metadata":{}},{"na
+me":"date_key","type":"date","nullable":true,"metadata":{}}]} |
+| spark.sql.sources.schema.numPartCols  | 1                                                                                               |
+| spark.sql.sources.schema.partCol.0    | date_key                                                                                        |
+| transient_lastDdlTime                 | 1791501752                                                                                      |
++---------------------------------------+-------------------------------------------------------------------------------------------------+
+**********************
+Windows PowerShell transcript end
+End time: 20261008193716
+**********************

@@ -1,0 +1,17 @@
+ALTER DATABASE iphone_analytics SET DBPROPERTIES ('project.name'='Ravi iPhone Sales Analytics','project.student'='Ravi');
+USE iphone_analytics;
+ALTER TABLE bronze_customers SET TBLPROPERTIES ('project.name'='Ravi iPhone Sales Analytics','project.student'='Ravi');
+ALTER TABLE bronze_products SET TBLPROPERTIES ('project.name'='Ravi iPhone Sales Analytics','project.student'='Ravi');
+ALTER TABLE bronze_stores SET TBLPROPERTIES ('project.name'='Ravi iPhone Sales Analytics','project.student'='Ravi');
+ALTER TABLE bronze_sales SET TBLPROPERTIES ('project.name'='Ravi iPhone Sales Analytics','project.student'='Ravi');
+ALTER TABLE silver_customers SET TBLPROPERTIES ('project.name'='Ravi iPhone Sales Analytics','project.student'='Ravi');
+ALTER TABLE silver_products SET TBLPROPERTIES ('project.name'='Ravi iPhone Sales Analytics','project.student'='Ravi');
+ALTER TABLE silver_stores SET TBLPROPERTIES ('project.name'='Ravi iPhone Sales Analytics','project.student'='Ravi');
+ALTER TABLE silver_sales SET TBLPROPERTIES ('project.name'='Ravi iPhone Sales Analytics','project.student'='Ravi');
+ALTER TABLE dim_customer SET TBLPROPERTIES ('project.name'='Ravi iPhone Sales Analytics','project.student'='Ravi');
+ALTER TABLE dim_product SET TBLPROPERTIES ('project.name'='Ravi iPhone Sales Analytics','project.student'='Ravi');
+ALTER TABLE dim_store SET TBLPROPERTIES ('project.name'='Ravi iPhone Sales Analytics','project.student'='Ravi');
+ALTER TABLE dim_date SET TBLPROPERTIES ('project.name'='Ravi iPhone Sales Analytics','project.student'='Ravi');
+ALTER TABLE fact_sales SET TBLPROPERTIES ('project.name'='Ravi iPhone Sales Analytics','project.student'='Ravi');
+DESCRIBE DATABASE EXTENDED iphone_analytics;
+SHOW TBLPROPERTIES fact_sales ('project.student');

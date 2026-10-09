@@ -1,0 +1,58 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261008194136
+Username: RAVI\rsah9
+RunAs User: RAVI\rsah9
+Configuration Name: 
+Machine: RAVI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoLogo -NoExit -ExecutionPolicy Bypass -File E:\iPhone-Sales-Project\run-console-evidence.ps1 -Number 11 -SqlFile sql\actual\evidence-11.sql
+Process ID: 7724
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Ravi iPhone Sales Analytics Project
+Actual Docker project account:
+takeo
+Actual container: takeo-de-env
+
+Executing these commands:
+USE iphone_analytics;
+SHOW TBLPROPERTIES fact_sales ('project.student');
+SELECT date_key, SUM(quantity) AS units, SUM(total_amount) AS revenue FROM fact_sales GROUP BY date_key;
+SELECT d.year, d.month, SUM(f.total_amount) AS revenue FROM fact_sales f JOIN dim_date d ON f.date_key=d.date_key GROUP BY d.year,d.month;
+SELECT c.customer_name, COUNT(*) AS purchases, SUM(f.quantity) AS units, SUM(f.total_amount) AS revenue FROM fact_sales f JOIN dim_customer c ON f.customer_id=c.customer_id GROUP BY c.customer_name;
++------------+-------------+
+| prpt_name  | prpt_value  |
++------------+-------------+
+| Ravi       | NULL        |
++------------+-------------+
++-------------+--------+----------+
+|  date_key   | units  | revenue  |
++-------------+--------+----------+
+| 2023-01-10  | 1      | 900      |
+| 2023-01-12  | 2      | 2200     |
+| 2023-01-15  | 1      | 900      |
+| 2023-01-20  | 2      | 400      |
++-------------+--------+----------+
++---------+----------+----------+
+| d.year  | d.month  | revenue  |
++---------+----------+----------+
+| 2023    | 1        | 4400     |
++---------+----------+----------+
++------------------+------------+--------+----------+
+| c.customer_name  | purchases  | units  | revenue  |
++------------------+------------+--------+----------+
+| Alice            | 2          | 3      | 1300     |
+| Bob              | 1          | 2      | 2200     |
+| Charlie          | 1          | 1      | 900      |
++------------------+------------+--------+----------+
+**********************
+Windows PowerShell transcript end
+End time: 20261008194812
+**********************

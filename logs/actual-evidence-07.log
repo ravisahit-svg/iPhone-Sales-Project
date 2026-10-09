@@ -1,0 +1,42 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261008194136
+Username: RAVI\rsah9
+RunAs User: RAVI\rsah9
+Configuration Name: 
+Machine: RAVI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoLogo -NoExit -ExecutionPolicy Bypass -File E:\iPhone-Sales-Project\run-console-evidence.ps1 -Number 07 -SqlFile sql\actual\evidence-07.sql
+Process ID: 32548
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Ravi iPhone Sales Analytics Project
+Actual Docker project account:
+takeo
+Actual container: takeo-de-env
+
+Executing these commands:
+USE iphone_analytics;
+SHOW TBLPROPERTIES fact_sales ('project.student');
+SELECT s.store_name, SUM(f.total_amount) AS revenue FROM fact_sales f JOIN dim_store s ON f.store_id=s.store_id GROUP BY s.store_name;
++------------+-------------+
+| prpt_name  | prpt_value  |
++------------+-------------+
+| Ravi       | NULL        |
++------------+-------------+
++-----------------+----------+
+|  s.store_name   | revenue  |
++-----------------+----------+
+| Apple Store NY  | 3100     |
+| Apple Store SJ  | 1300     |
++-----------------+----------+
+**********************
+Windows PowerShell transcript end
+End time: 20261008194618
+**********************

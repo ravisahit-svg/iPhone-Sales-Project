@@ -1,0 +1,44 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261008193605
+Username: RAVI\rsah9
+RunAs User: RAVI\rsah9
+Configuration Name: 
+Machine: RAVI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoLogo -NoExit -ExecutionPolicy Bypass -File E:\iPhone-Sales-Project\run-console-evidence.ps1 -Number 10 -SqlFile sql\actual\evidence-10.sql
+Process ID: 7032
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Ravi iPhone Sales Analytics Project
+Actual Docker project account:
+takeo
+Actual container: takeo-de-env
+
+Executing these commands:
+USE iphone_analytics;
+SHOW TBLPROPERTIES fact_sales ('project.student');
+SELECT * FROM fact_sales LIMIT 10;
++------------+-------------+
+| prpt_name  | prpt_value  |
++------------+-------------+
+| Ravi       | NULL        |
++------------+-------------+
++---------------------+-------------------------+------------------------+----------------------+----------------------+--------------------------+----------------------+
+| fact_sales.sale_id  | fact_sales.customer_id  | fact_sales.product_id  | fact_sales.store_id  | fact_sales.quantity  | fact_sales.total_amount  | fact_sales.date_key  |
++---------------------+-------------------------+------------------------+----------------------+----------------------+--------------------------+----------------------+
+| 1                   | 1                       | 101                    | 10                   | 1                    | 900                      | 2023-01-10           |
+| 2                   | 2                       | 102                    | 20                   | 2                    | 2200                     | 2023-01-12           |
+| 3                   | 3                       | 101                    | 20                   | 1                    | 900                      | 2023-01-15           |
+| 4                   | 1                       | 103                    | 10                   | 2                    | 400                      | 2023-01-20           |
++---------------------+-------------------------+------------------------+----------------------+----------------------+--------------------------+----------------------+
+**********************
+Windows PowerShell transcript end
+End time: 20261008193738
+**********************
